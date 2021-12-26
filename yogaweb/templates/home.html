@@ -1,0 +1,228 @@
+{% load static %}
+<!doctype html>
+<html class="no-js" lang="zxx">
+
+<!-- Mirrored from preview.colorlib.com/theme/startup2/contact.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 15 Jan 2021 05:12:44 GMT -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>City Management System</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+<link rel="stylesheet" href="{% static 'css/font-awesome.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+<link rel="stylesheet" href="{% static 'css/nice-select.css' %}">
+<link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+<link rel="stylesheet" href="{% static 'css/gijgo.css' %}">
+<link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+<link rel="stylesheet" href="{% static 'css/slick.css' %}">
+<link rel="stylesheet" href="{% static 'css/slicknav.css' %}">
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{%static 'styles.css' %}">
+</head>
+<body>
+<!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+
+<header>
+<div class="header-area ">
+<div id="sticky-header" class="main-header-area">
+<div class="container-fluid p-0">
+<div class="row align-items-center no-gutters">
+<div class="col-xl-2 col-lg-2">
+<div class="logo-img">
+</div>
+</div>
+<div class="col-xl-8 col-lg-8">
+<div class="main-menu  d-none d-lg-block text-center">
+    <nav>
+        <ul id="navigation">
+        <li><a href="/home/">home</a></li>
+        <li><a href="/viewissue/">View Issues</a></li>
+        <li><a href="/addissue/">Add Issue</a></li>
+        {% if user.is_authenticated %}
+        <li><a href="/profile/">Profile</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        <li><a href="/logout/">logout</a></li>
+        {% else %}
+        <li><a href="/signup/">Signup</a></li>
+        <li><a href="/login/">login</a></li>
+        <li><a href="/contact/">Contact</a></li>
+        {% endif %}
+        </ul>
+        </nav>
+</div>
+</div>
+<div class="col-lg-2 d-none d-lg-block">
+<div class="log_chat_area d-flex align-items-end">
+{% comment %} <a href="/logout/" target="_black" class="say_hi">Say Hello</a> {% endcomment %}
+</div>
+</div>
+<div class="col-12">
+<div class="mobile_menu d-block d-lg-none"></div>
+</div>
+</div>
+ </div>
+</div>
+</div>
+</header>
+
+
+
+<div class="bradcam_area breadcam_bg_3">
+<div class="container">
+<div class="row">
+<div class="col-xl-12">
+<div class="bradcam_text"><br><br><br><br><br>
+{% comment %} <h3>Yoga Class App</h3> {% endcomment %}
+</div>
+</div>
+</div>
+</div>
+</div>
+<br><br><center><p>
+    This city management application is a dynamic website which reacts at realtime as well as it is a highly scalable application.</p>
+    <p>This website is totally developed on tech stacks Django, Python, Html, Css, Bootstrap, Javascript, postgresql(Database)I have used ORM (Object Relationship Mapping) for database handling and DTL (Django Template Library) and Jinja for Rest API connection and dynamic data handling in between backend and frontend.</p>
+    <p>this application have feature of secure signup and login with django authentication. Signup has password validator and username, email which is very powerful. login is done using the safer auth library of django authentication. The forgot password option is also given to the user where after submitting some valid information the password will be sent to the user's valid email id. After logging in, users will be able to edit their own profile. where view profile, edit profile, change password option is given to the user. i have added contact us page(where user can write their query,feedback,issues,requests to app), Newsletter(to get regular update from app), Admin portal(to manage all the database). Everything has an email alert system.</p>
+     
+    <p>To install this application you need to have following softwares:-
+    1)python with latest version
+    2)pip with latest version
+    3)Postgresql with latest version
+    4)Visual Studio with latest version
+    5)All path should be added to system variables</p>
+     <p>
+    Steps to run application:
+    1)First of all, Go to the location where you want to install the software and make one folder.
+    2)open cmd .. Follow commands:- write your own names where it is mentioned to type name.. write it down to remember it.
+    cd nikhil(folder_name)
+    3)Make an environment for the django application and activate it. whenever want to run a project, I need to start the environment first using the workon command.
+    pip install virtualenvwrapper-win
+    mkvirtualenv nick(env_name)
+    workon nick(env_name)
+    4)After this, paste the application file in the same location.
+    5)install all the packages mentioned in requirements.txt
+    ex. pip install psycopg2
+    6)open postgresql and make one database named 'cms'.
+    7)open project in cmd ex. cd yoga
+    8)migrate database schema/model to database 'cms'. for that write following commands:-
+    python manage.py makemigrations
+    python manage.py sqlmigrate yogaweb 0001
+    python manage.py migrate
+    ....and database will get migrated to postgresql
+    9)Now lets create Admin superuser
+    python manage.py createsuperuser
+    username=nikhil
+    email=nikhil@gmail.com
+    password=123(won't be able to see typed characters.so don't worry.just type it)
+    confirm password=123(won't be able to see typed characters.so don't worry.just type it)
+    weak password[Y/N]=Y
+    superuser will get created.
+    10)Now you can run your application. Use the following command.
+    python manage.py runserver
+    go to google chrome and type in the url bar http://127.0.0.1:8000/ and the application will get executed successfully.
+    11)to visit admin site visit http://127.0.0.1:8000/admin
+    </p></center>
+    
+<footer class="footer">
+<div class="footer_top">
+<div class="container">
+<div class="row align-items-center">
+<div class="col-lg-2 col-md-3">
+<div class="footer_logo wow fadeInRight" data-wow-duration="1s" data-wow-delay=".3s">
+
+</div>
+</div>
+<div class="col-xl-7 col-lg-7 col-md-9">
+<div class="menu_links">
+<ul>
+<li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".2s" href="/home/">| home |</a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s"></li>
+    <li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".4s" href="/viewissue/">| View Issue |</a></li>
+    {% if user.is_authenticated %}
+<li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.1s" href="/profile/">| Profile |</a></li>
+{% else %}
+<li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay=".8s" href="/signup/">| Signup |</a></li>
+<li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="1s" href="/login/">| Login |</a></li>
+{% endif %}
+<li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.1s" href="/addissue/">| Add Issue |</a></li>
+<li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.1s" href="/contact/">| Contact |</a></li>
+{% if user.is_authenticated%}
+<li><a class="wow fadeInDown" data-wow-duration="1s" data-wow-delay="1.1s" href="/logout/">| Logout |</a></li>
+{% endif %}
+</ul>
+</div>
+</div>
+<div class="col-lg-3 col-md-12">
+<div class="socail_links">
+    <ul>
+        <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s" href="#"> <i class="fa fa-facebook"></i> </a></li>
+        <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".4s" href="#"> <i class="fa fa-twitter"></i> </a></li>
+        <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".5s" href="https://www.instagram.com/nancykamboj003/"> <i class="fa fa-instagram"></i> </a></li>
+        <li><a class="wow fadeInUp" data-wow-duration="1s" data-wow-delay=".6s" href="mailto:nancykamboj80@gmail.com"> <i class="fa fa-google-plus"></i> </a></li>
+        </ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="copy-right_text">
+<div class="container">
+<div class="footer_border"></div>
+<div class="row">
+<div class="col-xl-12">
+    <p class="copy_right text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="1.3s">
+        City management system website for college mini project exam. All rights reserved | Developed by <a href="www.linkedin.com/in/nancy-kamboj-247a94194" target="_blank">Nancy Kamboj</a>
+        
+        </p> 
+</div>
+</div>
+</div>
+</div> 
+</div>
+</footer>
+
+
+<script src="{% static 'js/vendor/modernizr-3.5.0.min.js' %}"></script>
+<script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+<script src="{% static 'js/popper.min.js' %}"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+<script src="js/isotope.pkgd.min.js"></script>
+<script src="{% static 'js/ajax-form.js' %}"></script>
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+<script src="{% static 'js/imagesloaded.pkgd.min.js' %}"></script>
+<script src="{% static 'js/scrollIt.js' %}"></script>
+<script src="{% static 'js/jquery.scrollUp.min.js' %}"></script>
+<script src="{% static 'js/wow.min.js' %}"></script>
+<script src="{% static 'js/nice-select.min.js' %}"></script>
+<script src="{% static 'js/jquery.slicknav.min.js' %}"></script>
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+<script src="{% static 'js/plugins.js' %}"></script>
+<script src="{% static 'js/gijgo.min.js' %"></script>
+
+<script src="{% static 'js/contact.js' %}"></script>
+<script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+<script src="{% static 'js/jquery.form.js' %}"></script>
+<script src="{% static 'js/jquery.validate.min.js' %}"></script>
+<script src="{% static 'js/mail-script.js' %}"></script>
+<script src="{% static 'js/main.js' %}"></script>
+
+<script async src="{% static 'https://www.googletagmanager.com/gtag/js?id=UA-23581568-13' %}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+</body>
+
+</html>

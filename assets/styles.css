@@ -1,0 +1,77 @@
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=number],input[type=email],input[type=text], input[type=password] ,input[type=tel],input[type=text]:focus{
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+  color:#000000
+}
+
+input[type=text]:focus,input[type=email]:focus,input[type=ptel]:focus, input[type=password]:focus ,input[type=number]:focus{
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+::placeholder {
+  color: rgb(0, 0, 0);
+  opacity: 1; 
+}
+/* Set a style for all buttons */
+button {
+  background-color: #242241;
+  color: white;
+  padding: 10px 20px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 10px 20px;
+  background-color: #2b474b;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 25%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+span.psw {
+  float: right;
+  padding-top: 16px;
+}
+
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
